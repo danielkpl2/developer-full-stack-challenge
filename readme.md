@@ -1,3 +1,21 @@
+## Environment Variables
+copy the provided .env_sample into .env and set the PostgreSQL URL and credentials
+
+## Database setup
+A database will be created as specified in the .env file, default dk_test
+I'm using alembic for database migrations.
+alembic depends on psycopg2 that might require extra configuration depending on your environment.
+pg_config executable has to be installed and in PATH.
+https://stackoverflow.com/questions/11618898/pg-config-executable-not-found
+For example on mac add this to your ~./zprofile (or other shell config) and restart terminal/source ~./zprofile:
+PATH="/Library/PostgreSQL/16/bin:${PATH}"
+or install postgre with brew: brew install postgresql
+
+## Run Batabase Migrations
+
+run `alembic upgrade head` to create the database tables and seed the DB
+
+
 # DataCose Full Stack Challenge
 
 The goal of this challenge if to create a Nuxt frontend with a FastAPI backend matching the objectives down below.
@@ -54,3 +72,4 @@ The modal to add/edit a book should have three fields:
 
 ## Notes
 The usage of the provided template is mandatory. Submissions not written in this template, will not be reviewed. Writing tests is not mandatory, but doing so will give you bonus points. Please fork this repository and invite info@datacose.com.
+
