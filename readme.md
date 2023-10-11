@@ -1,5 +1,5 @@
 ## Environment Variables
-copy the provided .env_sample into .env and set the PostgreSQL URL and credentials
+copy the provided .env_example into .env and set the PostgreSQL URL and credentials
 
 ## Database setup
 A database will be created as specified in the .env file, default dk_test.
