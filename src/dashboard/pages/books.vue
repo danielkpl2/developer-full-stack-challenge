@@ -175,7 +175,6 @@ export default {
         },
         async saveBook() {
             this.hideModal('add-book')
-            console.log('book_name', this.book_name)
             try {
                 let response = await this.$axios.$post("/books", {
                     name: this.book_name,

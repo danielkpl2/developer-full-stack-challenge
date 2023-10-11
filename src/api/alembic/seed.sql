@@ -1,4 +1,3 @@
--- Insert 10 authors
 INSERT INTO author (id, name) VALUES
     (1, 'Author 1'),
     (2, 'Author 2'),
@@ -23,8 +22,6 @@ INSERT INTO author (id, name) VALUES
 
 SELECT setval('author_id_seq', 21, false);
 
-
--- Insert books for each author
 INSERT INTO book (id, name, number_pages, author_id) VALUES
     (1, 'Book A1', 200, 1),
     (2, 'Book A2', 250, 1),
