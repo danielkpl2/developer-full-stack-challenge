@@ -44,7 +44,34 @@ export default {
         ['bootstrap-vue/nuxt', { icons: true, css: true }],
         // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
+        '@nuxtjs/auth-next',
     ],
+    auth: {
+        strategies: {
+            local: {
+              token: {
+                property: 'access_token', // The property in the response that holds the token
+                global: true, // Include the token with every HTTP request
+                type: 'Bearer',
+              },
+              endpoints: {
+                login: { url: '/token', method: 'post'}, // The endpoint for the login API
+                logout: false, // No logout endpoint; you can customize this if needed
+                user: false, // The endpoint to fetch user data
+              },
+            },
+          },
+    },
+
+    router: {
+        extendRoutes(routes, resolve) {
+            routes.push({
+                name: 'root',
+                path: '/',
+                redirect: '/authors', // Redirect the root route to /authors
+            });
+        },
+    },
 
     publicRuntimeConfig: {
         axios: {

@@ -6,6 +6,9 @@ class AuthorBase(BaseModel):
 class AuthorCreate(AuthorBase):
     pass
 
+class AuthorUpdate(AuthorCreate):
+    id: int
+
 class Author(AuthorBase):
     id: int
     number_books: int
@@ -19,6 +22,9 @@ class BookBase(BaseModel):
 
 class BookCreate(BookBase):
     author_id: int
+
+class BookUpdate(BookCreate):
+    id: int
 
 class Book(BookBase):
     id: int

@@ -9,7 +9,20 @@ INSERT INTO author (id, name) VALUES
     (7, 'Author 7'),
     (8, 'Author 8'),
     (9, 'Author 9'),
-    (10, 'Author 10');
+    (10, 'Author 10'),
+    (11, 'Author 11'),
+    (12, 'Author 12'),
+    (13, 'Author 13'),
+    (14, 'Author 14'),
+    (15, 'Author 15'),
+    (16, 'Author 16'),
+    (17, 'Author 17'),
+    (18, 'Author 18'),
+    (19, 'Author 19'),
+    (20, 'Author 20');
+
+SELECT setval('author_id_seq', 21, false);
+
 
 -- Insert books for each author
 INSERT INTO book (id, name, number_pages, author_id) VALUES
@@ -51,6 +64,50 @@ INSERT INTO book (id, name, number_pages, author_id) VALUES
     (18, 'Book J2', 320, 10),
     (19, 'Book J3', 260, 10);
 
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (20, 'Book K1', 200, 11),
+    (21, 'Book K2', 250, 11),
+    (22, 'Book K3', 300, 11);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (23, 'Book L1', 180, 12),
+    (24, 'Book L2', 220, 12);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (25, 'Book M1', 280, 13);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (26, 'Book N1', 150, 14),
+    (27, 'Book N2', 270, 14),
+    (28, 'Book N3', 320, 14),
+    (29, 'Book N4', 200, 14);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (30, 'Book O1', 230, 15),
+    (31, 'Book O2', 260, 15);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (32, 'Book P1', 190, 16);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (33, 'Book Q1', 310, 17);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (34, 'Book R1', 180, 18);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (35, 'Book S1', 240, 19);
+
+INSERT INTO book (id, name, number_pages, author_id) VALUES
+    (36, 'Book T1', 280, 20),
+    (37, 'Book T2', 320, 20),
+    (38, 'Book T3', 260, 20);
+
+SELECT setval('book_id_seq', 39, false);
+
 INSERT INTO dcuser (id, username, password) VALUES 
     (1, 'user1', '$2b$12$iFGW/xuxs.KQIMrnHCaCwONbLBcHbvQzim8bqXvliDx4LiKsYhqZK'),
     (2, 'user2', '$2b$12$WJxqMocIPNknqrffMCxAT.2QaT2HROFVqyBd2R.FIqjGOaeI2Ceqa');
+
+SELECT setval('dcuser_id_seq', 3, false);

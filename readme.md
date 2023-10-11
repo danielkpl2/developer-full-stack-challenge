@@ -3,13 +3,24 @@ copy the provided .env_sample into .env and set the PostgreSQL URL and credentia
 
 ## Database setup
 A database will be created as specified in the .env file, default dk_test
+
+Two users are available:
+`user1, password1`
+`user2, password2`
+
 I'm using alembic for database migrations.
+
 alembic depends on psycopg2 that might require extra configuration depending on your environment.
+
 pg_config executable has to be installed and in PATH.
+
 https://stackoverflow.com/questions/11618898/pg-config-executable-not-found
+
 For example on mac add this to your ~./zprofile (or other shell config) and restart terminal/source ~./zprofile:
-PATH="/Library/PostgreSQL/16/bin:${PATH}"
-or install postgre with brew: brew install postgresql
+
+`PATH="/Library/PostgreSQL/16/bin:${PATH}"`
+
+or install postgre with brew: `brew install postgresql`
 
 ## Run Batabase Migrations
 
